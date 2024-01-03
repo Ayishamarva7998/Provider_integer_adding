@@ -5,10 +5,11 @@ import 'package:provider/provider.dart';
 class home extends StatelessWidget {
   const home({super.key});
 
-  @override
+  @override 
   Widget build(BuildContext context) {
     final add = Provider.of<provider>(context,listen: false);
     return Scaffold(
+      appBar: AppBar(title: Text('Integer Adder'),),
       body: Column(
         children: [
           Consumer<provider>(builder:(context, value, child) =>  Text(
